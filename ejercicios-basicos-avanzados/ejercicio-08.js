@@ -18,3 +18,11 @@ function findLongestWord(stringList) {
     return palabraMasLarga;
 }
 console.log(findLongestWord(avengers));
+
+function finestFindLonggestWord(stringList){
+    return stringList.reduce((masLarga,palabraActual) => {
+        return palabraActual.length>masLarga.length ? palabraActual : masLarga;
+    }, "");
+}
+
+console.log(finestFindLonggestWord(avengers));
