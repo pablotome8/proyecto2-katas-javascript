@@ -25,7 +25,7 @@ function averageWord(list){
 console.log(averageWord(mixedElements));
 
 function finestaverageWord(list) {
-    const total = list.reduce((acc, el) => {
+    let total = list.reduce((acc, el) => {
         return acc + (typeof el === "string" ? el.length : el);
     }, 0);
     
