@@ -1,22 +1,26 @@
-// Filtra y crea 
-const songs = [
-  { title: 'Bohemian Rhapsody', genre: 'Rock', duration: 5.55 },
-  { title: 'Stairway to Heaven', genre: 'Rock', duration: 7.58 },
-  { title: 'Billie Jean', genre: 'Pop', duration: 4.54 },
-  { title: 'Hotel California', genre: 'Rock', duration: 6.31 },
-  { title: 'Sweet Child o Mine', genre: 'Rock', duration: 5.56 },
-  { title: 'Smells Like Teen Spirit', genre: 'Rock', duration: 5.01 },
-  { title: 'Comfortably Numb', genre: 'Rock', duration: 6.23 },
-  { title: 'Wish You Were Here', genre: 'Rock', duration: 5.34 },
-  { title: 'Black Dog', genre: 'Rock', duration: 4.54 },
-  { title: 'Thunderstruck', genre: 'Rock', duration: 4.52 },
-  { title: 'Crazy Love', genre: 'Pop', duration: 3.52 },
+// Filtro
+const movies = [
+  { title: 'The Matrix', releaseYear: 1999 },
+  { title: 'Star Wars: Episode IV – A New Hope', releaseYear: 1977 },
+  { title: 'Inception', releaseYear: 2010 },
+  { title: 'Jurassic Park', releaseYear: 1993 },
+  { title: 'The Shawshank Redemption', releaseYear: 1994 },
+  { title: 'Pulp Fiction', releaseYear: 1994 },
+  { title: 'Avatar', releaseYear: 2009 },
+  { title: 'The Dark Knight', releaseYear: 2008 },
+  { title: 'Fight Club', releaseYear: 1999 },
+  { title: 'Forrest Gump', releaseYear: 1994 }
 ];
-const rockPlaylist = [];
-
-for (const song of songs) {
-    if (song.genre.toLowerCase()==='rock' && song.duration>5) {
-        rockPlaylist.push(song);   
+let newerMovies=0;
+let olderMovies=0;
+for (const movie of movies) {
+    if (movie.releaseYear>2000) {
+        newerMovies++;
+        
+    }else{
+        olderMovies++;
     }
+    
 }
-console.log(rockPlaylist);
+console.log(newerMovies);
+console.log(olderMovies);

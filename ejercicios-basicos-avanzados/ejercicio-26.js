@@ -1,21 +1,22 @@
 // Filtra y crea 
-const albums = [
-{ title: 'Led Zeppelin IV', genre: 'Rock', duration: 42.19 },
-  { title: 'The Dark Side of the Moon', genre: 'Rock', duration: 42.49 },
-  { title: 'Back in Black', genre: 'Rock', duration: 42.11 },
-  { title: 'Hotel California', genre: 'Rock', duration: 43.08 },
-  { title: 'Abbey Road', genre: 'Rock', duration: 47.23 },
-  { title: 'Thriller', genre: 'Pop', duration: 42.19 },
-  { title: 'A Night at the Opera', genre: 'Rock', duration: 43.08 },
-  { title: 'The Wall', genre: 'Rock', duration: 81.00 },
-  { title: 'Born to Run', genre: 'Rock', duration: 39.26 },
-  { title: 'The Joshua Tree', genre: 'Rock', duration: 50.11 }
+const songs = [
+  { title: 'Bohemian Rhapsody', genre: 'Rock', duration: 5.55 },
+  { title: 'Stairway to Heaven', genre: 'Rock', duration: 7.58 },
+  { title: 'Billie Jean', genre: 'Pop', duration: 4.54 },
+  { title: 'Hotel California', genre: 'Rock', duration: 6.31 },
+  { title: 'Sweet Child o Mine', genre: 'Rock', duration: 5.56 },
+  { title: 'Smells Like Teen Spirit', genre: 'Rock', duration: 5.01 },
+  { title: 'Comfortably Numb', genre: 'Rock', duration: 6.23 },
+  { title: 'Wish You Were Here', genre: 'Rock', duration: 5.34 },
+  { title: 'Black Dog', genre: 'Rock', duration: 4.54 },
+  { title: 'Thunderstruck', genre: 'Rock', duration: 4.52 },
+  { title: 'Crazy Love', genre: 'Pop', duration: 3.52 },
 ];
-let totalDuration = 0
-for (const album of albums) {
-    if (album.genre.toLowerCase()==='rock') {
-     totalDuration+=album.duration   
+const rockPlaylist = [];
+
+for (const song of songs) {
+    if (song.genre.toLowerCase()==='rock' && song.duration>5) {
+        rockPlaylist.push(song);   
     }
-    
 }
-console.log(totalDuration);
+console.log(rockPlaylist);
